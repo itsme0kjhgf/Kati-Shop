@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title will be dynamically set by JavaScript -->
+    <title>Product Details</title>
+    <!-- Your main CSS file, shared with index.html -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts, etc. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- A simpler header for the product page -->
+    <header>
+        <div class="nav-container container">
+            <a href="index.html" class="logo">Kati Shop</a>
+            <nav>
+                <ul>
+                    <!-- Text for this link will be set by the script -->
+                    <li><a href="index.html" data-key="nav_home_alt">← Back to Shop</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- This container is a placeholder that our script will fill -->
+        <div id="product-detail-container" class="container">
+            <p style="text-align: center; padding: 50px;">Loading product...</p>
+        </div>
+    </main>
+
+    <!-- The same footer -->
+    <footer>
+        <div class="container">
+            <p data-key="footer_text">© 2025 Kati Shop</p>
+        </div>
+    </footer>
+
+    <!-- Firebase library scripts -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>
+
+    <!-- The ONE AND ONLY script.js file -->
+    <script src="script.js" defer></script>
+</body>
+</html>
