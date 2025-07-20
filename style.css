@@ -196,3 +196,67 @@ footer { background: var(--secondary-color); color: var(--background-color); tex
         font-size: 1rem;
     }
 }
+/* ---
+   FINAL UI UPGRADE - style.css Additions
+   --- */
+
+/* Styles for the container holding the size dropdown */
+.size-selector-container {
+    margin-bottom: 2rem;
+}
+
+.size-selector-container h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--secondary-color);
+}
+
+/* Styling the <select> dropdown itself */
+#size-selector {
+    /* Box Model & Sizing */
+    width: 100%;
+    padding: 0.8rem 1rem;
+    
+    /* Font & Appearance */
+    font-family: var(--font-main);
+    font-size: 1rem;
+    color: var(--primary-color);
+    background-color: white;
+    
+    /* Custom Arrow for a modern look */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-chevron-down' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1em;
+    
+    /* Borders & Behavior */
+    border: 1px solid var(--grey);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Style for when the dropdown is focused (clicked on) */
+#size-selector:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.2);
+}
+
+/* The disabled "Order" button style */
+.add-to-cart-btn.disabled {
+    background-color: var(--grey);
+    cursor: not-allowed;
+    transform: none; /* No hover effect when disabled */
+}
+
+/* Style for an active button, you can remove size-btn styles if not used elsewhere */
+.size-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
