@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Kati Shop - Our Collection</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- =========== LANGUAGE SELECTION MODAL (Hidden by default) =========== -->
+    <div class="language-overlay visible" id="language-overlay">
+        <div class="language-toast">
+            <h1>Kati Shop</h1>
+            <p>Please select your language.</p>
+            <div class="language-buttons">
+                <button class="lang-btn" data-lang="en">English</button>
+                <button class="lang-btn" data-lang="fr">Français</button>
+                <button class="lang-btn arabic" data-lang="ar">العربية</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========== HEADER =========== -->
+    <header>
+        <div class="nav-container container">
+            <a href="#" class="logo">Kati Shop</a>
+            <nav>
+                <ul>
+                    <li><a href="#" data-key="nav_home">Home</a></li>
+                    <li><a href="#" data-key="nav_new">New Arrivals</a></li>
+                    <li><a href="#" data-key="nav_clothes">Clothes</a></li>
+                    <li><a href="#" data-key="nav_contact">Contact</a></li>
+                    <li>
+                        <button id="change-lang-btn" title="Change Language">🌐</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- =========== SHOP PAGE (GRID VIEW) =========== -->
+        <div id="shop-page">
+            <section class="hero">
+                <h1 class="hero-title" data-key="hero_title">Discover Our New Collection</h1>
+                <p class="hero-subtitle" data-key="hero_subtitle">Timeless designs, sustainably crafted.</p>
+            </section>
+
+            <div class="container">
+                <!-- UPDATED: This container is now empty and will be filled automatically -->
+                <div class="product-grid" id="product-grid-container">
+                    <!-- Products from the database will appear here... -->
+                </div>
+            </div>
+        </div>
+
+        <!-- =========== PRODUCT DETAIL PAGE =========== -->
+        <div id="product-page" class="hidden">
+            <!-- UPDATED: This container is also empty and will be filled automatically -->
+            <div class="container" id="product-page-container">
+                <!-- A specific product's details will appear here when clicked... -->
+            </div>
+        </div>
+    </main>
+
+    <!-- =========== FOOTER =========== -->
+    <footer>
+        <div class="container">
+            <p data-key="footer_text">© 2025 Kati Shop. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ADDED: The Firebase library scripts. These must be BEFORE your main script.js -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>
+    
+    <!-- This links to your main JavaScript file -->
+    <script src="script.js" defer></script>
+</body>
+</html>
